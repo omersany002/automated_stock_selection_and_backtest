@@ -84,10 +84,5 @@ Below is the output of the minimum variance portfolios' performance from 2010 to
 ## Contributing
 Contributions are welcome! Please feel free to fork the repository, submit issues, or create pull requests to improve the framework.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
 ---
-
-Feel free to explore the repository and modify the scripts to suit your own research and investment needs!
 
