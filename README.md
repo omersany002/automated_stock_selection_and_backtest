@@ -1,55 +1,68 @@
-# automated_stock_selection_and_backtest
+# Automated Stock Selection and Backtest
 
-## Project Overview:
-The project consists of four Python scripts aimed at implementing and backtesting stock selection strategies using Modern Portfolio Theory (MPT). Each script focuses on specific aspects of the process.
+This project is an automated framework designed to select stocks, construct portfolios, and backtest their performance over a 10-year period using four distinct strategies. It provides a systematic approach for financial research and analysis.
 
-1. Local CSV Optimizer (optimizer.py):
-A script designed to optimize local CSV files by filtering out irrelevant tickers.
-Reads the original price and financial ratios CSV files (price_data.csv and fin_ratios.csv).
-Utilizes the SelectionStrategies class to select relevant tickers based on specific criteria (e.g., value, growth, dividend, quality).
-Outputs smaller and optimized CSV files (opt_price.csv and opt_ratios.csv) containing data only for selected tickers.
-The optimized files serve as input for subsequent steps in the stock selection and backtesting process.
+## Project Structure
 
-2. Stock Selection Strategies (stock_selection.py):
-Implements different stock selection strategies.
-Strategies include Value Stocks, Growth Stocks, Dividend Stocks, and Quality Stocks.
-Uses financial ratios and price data to select stocks based on specific criteria.
-Outputs optimized CSV files for price and ratios.
-3. Stock Selection Strategies with Local Data (stock_selection_local.py):
-Extends stock selection strategies from stock_selection.py using local data.
-Utilizes optimized CSV files for price and ratios.
-Imports functions from mpt_optimizer.py for portfolio optimization.
-Provides methods to get optimal weights, calculate portfolio returns, and measure strategy performance.
+The project comprises the following key components:
 
-3. Portfolio Construction (portfolio_construction.py):
-This script implements functions related to Modern Portfolio Theory (MPT) for portfolio construction.
-It imports necessary packages such as numpy and scipy.optimize.
-Provides functions to calculate the mean return and covariance matrix of selected stock tickers, which are crucial components for MPT.
-Offers two main optimization functions:
-    * optimize_portfolio_variance: Returns optimal weights to minimize the portfolio variance.
-    * optimize_portfolio_sharpe: Returns optimal weights to maximize the Sharpe ratio.
-The get_optimal_weights function combines the data and optimization functions to obtain optimal weights for a given set of tickers and time period.
+### 1. **Stock Selection**
+The `stock_selection.py` script is responsible for:
+- Selecting stocks to be used in the strategies.
+- Leveraging specific filters and criteria to determine which stocks are eligible for portfolio inclusion.
+- Passing the selected stocks to the portfolio construction process.
 
-4. Backtesting Tickers (backtest.py):
-Backtests the stock tickers received from the Stock Selection Strategies file.
-Utilizes parallel processing for efficient backtesting.
-Displays average yearly returns, Sharpe ratios, and visualizations of portfolio returns over time.
-Outputs cumulative returns to an Excel file.
+### 2. **Portfolio Construction**
+The `portfolio_construction.py` script:
+- Creates optimal portfolios based on the selected stocks.
+- Implements portfolio allocation strategies to optimize returns.
+- Calculates returns for the chosen period for four different strategies.
 
+### 3. **Backtesting**
+The `backtest.py` script:
+- Utilizes the `stock_selection.py` script to run the algorithm across a 10-year historical period.
+- Outputs the performance results for the four different strategies, including detailed metrics and insights.
 
-## Usage:
-### Install Dependencies:
-Ensure that the required packages (pandas, numpy, yfinance, matplotlib) are installed.
+## Features
 
-### Run Scripts:
-* Execute the optimizer.py file
-* Run the backtest.py file
+- **Stock Selection**: Implements robust methodologies to filter and select stocks.
+- **Portfolio Optimization**: Leverages various techniques to build and optimize portfolios.
+- **Backtesting Framework**: Provides a comprehensive environment for testing strategies over long time horizons.
+- **Performance Analysis**: Outputs key metrics for strategy evaluation and comparison.
 
-### Adjust Configuration:
-Customize the variables in each script according to your preferences, such as start date, rebalance frequency, and portfolio type.
+## Usage
 
-### Interpret Results:
-Analyze the generated visualizations and printed performance metrics to evaluate the effectiveness of the implemented stock selection strategies.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/omersany002/automated_stock_selection_and_backtest.git
+   ```
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the stock selection process:
+   ```bash
+   python stock_selection.py
+   ```
+4. Execute the backtest:
+   ```bash
+   python backtest.py
+   ```
 
-## Conclusion:
-The project provides a comprehensive framework for selecting and backtesting stocks based on different strategies, incorporating principles from Modern Portfolio Theory. Users can customize the configuration, analyze results, and potentially extend the project with additional strategies or improvements.
+## Results
+
+The backtesting process will generate outputs, including:
+- Cumulative returns for each of the four strategies.
+- Comparative performance metrics.
+- Visualizations and reports summarizing the findings.
+
+## Contributing
+Contributions are welcome! Please feel free to fork the repository, submit issues, or create pull requests to improve the framework.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+Feel free to explore the repository and modify the scripts to suit your own research and investment needs!
+
