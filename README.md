@@ -56,6 +56,14 @@ The backtesting process will generate outputs, including:
 - Comparative performance metrics.
 - Visualizations and reports summarizing the findings.
 
+## Portfolio Cumulative Returns Over Time
+
+Below is the output of the minimum variance portfolios' performance from 2010 to 2020:
+
+![Portfolio Cumulative Returns](https://github.com/user-attachments/assets/efbe4e45-8f93-47f3-a492-0f0a43a93a5a)
+
+
+
 ## Contributing
 Contributions are welcome! Please feel free to fork the repository, submit issues, or create pull requests to improve the framework.
 
