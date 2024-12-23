@@ -2,6 +2,28 @@
 
 This project is an automated framework designed to select stocks, construct portfolios, and backtest their performance over a 10-year period using four distinct strategies. It provides a systematic approach for financial research and analysis.
 
+Strategies
+
+The framework tests the following four strategies:
+
+Value Stocks:
+
+Stocks with a price-to-book ratio equal to or less than 1.
+
+Positive price-to-earnings (P/E) ratio.
+
+Growth Stocks:
+
+Stocks with the highest revenue growth.
+
+Dividend Stocks:
+
+Stocks with the highest dividend yield.
+
+Quality Stocks:
+
+Stocks with the highest return on equity (ROE).
+
 ## Project Structure
 
 The project comprises the following key components:
